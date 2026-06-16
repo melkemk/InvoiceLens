@@ -101,7 +101,9 @@ export default function Home() {
             Try the live demo →
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/melkemk/InvoiceLens"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 sm:w-auto"
           >
             View source
