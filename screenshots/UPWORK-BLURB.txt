@@ -5,11 +5,18 @@ TITLE:
 AI Invoice & Receipt Data Extraction (Next.js + Vision LLM)
 
 SHORT DESCRIPTION (for the portfolio card):
-Drop in any invoice or receipt — photo, scan, or PDF — and get back clean,
-structured, export-ready data in about 5 seconds, with a confidence score on
-every field. No templates, no manual typing. InvoiceLens reads messy real-world
-documents the way a person would and hands your systems data they can actually
-use.
+Stop paying people to re-type invoices. InvoiceLens reads any invoice or receipt
+— phone photo, scan, or PDF — and returns clean, structured, export-ready data
+in ~5 seconds, with a confidence score on every field. No templates, no manual
+entry.
+
+Built as a real product, not a demo: vision-LLM extraction, strict Zod
+validation with auto-repair retries, per-field confidence review, batch
+processing, and one-click CSV/JSON export — provider-swappable across Groq,
+OpenAI & Gemini.
+
+SUGGESTED SKILL TAGS:
+TypeScript · Next.js · Data Extraction · LLM Integration · OCR / Document Processing
 
 Tech: Next.js 14, TypeScript, Tailwind, Zod, vision LLM via an OpenAI-compatible
 API (provider-swappable: Groq / OpenAI / Gemini), deployed on Vercel.
