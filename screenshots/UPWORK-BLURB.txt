@@ -1,0 +1,39 @@
+UPWORK PORTFOLIO — paste-ready text
+====================================
+
+TITLE:
+AI Invoice & Receipt Data Extraction (Next.js + Vision LLM)
+
+SHORT DESCRIPTION (for the portfolio card):
+InvoiceLens turns any invoice or receipt — image or PDF — into clean,
+schema-validated, export-ready data in ~5 seconds, with a confidence score on
+every field. Built as a real product: vision-LLM extraction, strict Zod
+validation with auto-repair retries, rate limiting, batch processing, inline
+human review, and one-click CSV/JSON export.
+
+Tech: Next.js 14, TypeScript, Tailwind, Zod, vision LLM via OpenAI-compatible
+API (provider-swappable: Groq / OpenAI / Gemini), deployed on Vercel.
+
+Live demo: https://extraction-zeta.vercel.app
+Source:    https://github.com/melkemk/InvoiceLens
+
+LONGER DESCRIPTION (for the project detail page):
+Businesses still re-type invoices and receipts by hand, and template-based OCR
+breaks on every new vendor layout. InvoiceLens reads documents the way a person
+would — no templates, no per-vendor rules — and returns structured data your
+systems can use.
+
+What I built:
+• Vision-powered extraction that works across any invoice/receipt layout.
+• Strict Zod schema validation with an automatic repair-retry, so malformed
+  model output never reaches the UI.
+• Per-field confidence scoring so users know what to trust.
+• Human-in-the-loop editable results table next to the original document.
+• Batch processing (up to 5 docs) with a combined CSV download.
+• Provider-agnostic LLM layer — one env var switches between Groq, OpenAI, and
+  Gemini.
+• Production hardening: server-side keys, request rate limiting, retries, and
+  graceful error handling.
+
+Outcome: a polished, deployed, end-to-end demo from drag-and-drop upload to
+validated export.
