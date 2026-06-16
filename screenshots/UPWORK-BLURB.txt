@@ -5,35 +5,56 @@ TITLE:
 AI Invoice & Receipt Data Extraction (Next.js + Vision LLM)
 
 SHORT DESCRIPTION (for the portfolio card):
-InvoiceLens turns any invoice or receipt — image or PDF — into clean,
-schema-validated, export-ready data in ~5 seconds, with a confidence score on
-every field. Built as a real product: vision-LLM extraction, strict Zod
-validation with auto-repair retries, rate limiting, batch processing, inline
-human review, and one-click CSV/JSON export.
+Drop in any invoice or receipt — photo, scan, or PDF — and get back clean,
+structured, export-ready data in about 5 seconds, with a confidence score on
+every field. No templates, no manual typing. InvoiceLens reads messy real-world
+documents the way a person would and hands your systems data they can actually
+use.
 
-Tech: Next.js 14, TypeScript, Tailwind, Zod, vision LLM via OpenAI-compatible
+Tech: Next.js 14, TypeScript, Tailwind, Zod, vision LLM via an OpenAI-compatible
 API (provider-swappable: Groq / OpenAI / Gemini), deployed on Vercel.
 
 Live demo: https://extraction-zeta.vercel.app
 Source:    https://github.com/melkemk/InvoiceLens
 
 LONGER DESCRIPTION (for the project detail page):
-Businesses still re-type invoices and receipts by hand, and template-based OCR
-breaks on every new vendor layout. InvoiceLens reads documents the way a person
-would — no templates, no per-vendor rules — and returns structured data your
-systems can use.
+Every business that handles invoices has the same hidden tax: someone, somewhere,
+is squinting at a PDF and re-typing it into a spreadsheet. It's slow, it's
+expensive, and the typos cost real money. The "solution" most teams reach for —
+template-based OCR — falls apart the moment a new vendor sends a slightly
+different layout.
 
-What I built:
-• Vision-powered extraction that works across any invoice/receipt layout.
-• Strict Zod schema validation with an automatic repair-retry, so malformed
-  model output never reaches the UI.
-• Per-field confidence scoring so users know what to trust.
-• Human-in-the-loop editable results table next to the original document.
-• Batch processing (up to 5 docs) with a combined CSV download.
-• Provider-agnostic LLM layer — one env var switches between Groq, OpenAI, and
-  Gemini.
-• Production hardening: server-side keys, request rate limiting, retries, and
-  graceful error handling.
+I built InvoiceLens to kill that workflow.
 
-Outcome: a polished, deployed, end-to-end demo from drag-and-drop upload to
-validated export.
+You drag in an invoice or receipt — a phone photo, a scan, or a PDF — and a
+vision LLM reads it end to end, the way a trained clerk would. No templates, no
+per-vendor rules, no setup. About five seconds later you're looking at the
+vendor, dates, every line item, and the totals laid out in a clean table —
+each field tagged with a confidence score so you know exactly what to trust and
+what to glance at twice.
+
+The hard part wasn't calling a model — it was making the output trustworthy
+enough to ship. So under the hood:
+
+• Every response is validated against a strict Zod schema. If the model returns
+  something malformed, an automatic repair-retry kicks in — broken data never
+  reaches the screen.
+• Per-field confidence scoring turns "the AI said so" into "here's how sure it
+  is," so a human can review in seconds instead of re-checking everything.
+• Results land in an editable table right beside the original document — fix a
+  digit inline and move on.
+• Need to process a stack? Batch mode handles up to 5 documents and gives you
+  one combined CSV.
+• One click exports to spreadsheet-ready CSV or clipboard-ready JSON, wired for
+  whatever comes next in the pipeline.
+• The LLM layer is provider-agnostic — a single env var switches between Groq,
+  OpenAI, and Gemini, so it's never locked to one vendor or price.
+• Production-hardened: server-side API keys, request rate limiting, retries, and
+  graceful error handling — not a fragile prompt demo.
+
+The result is a polished, fully deployed product: drag-and-drop in, validated,
+reviewed, exportable data out. It's the difference between "look, an AI demo"
+and "this could replace an afternoon of data entry."
+
+My role: full-stack engineer — product design, UI, the extraction pipeline,
+validation/retry logic, and deployment.
